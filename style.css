@@ -1,40 +1,56 @@
 :root {
-  --background-color: #fafafa;
+--primary-background-color: #fafafa;
+--secondary-background-color: #efefef;
+}
+
+html, body {
+  height: 100%;
 }
 
 body {
-  height: 250vh;
+  display: flex;
+  justify-content: center;
   margin: 0;
   font-family: "Roboto", sans-serif;
 }
 
+/************
+ ** HEADER **
+ ************/
 header {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background-color: var(--background-color);
+  background-color: var(--primary-background-color);
 }
 
 header h1 {
-  font-size: 2.2rem;
+  font-size: 9.5vw;
   font-weight: 900;
   line-height: 1em;
-  margin: 0;
-}
-
-header h1:first-child {
-  margin-bottom: 0.3em;
 }
 
 header::before {
   content: "";
-  position: fixed;
-  z-index: 1;
+  position: absolute;
   bottom: 0;
+  width: 100%;
   height: 50vh;
-  width: 100vw;
-  background-color: #efefef;
+  z-index: 1;
+  background-color: var(--secondary-background-color);
+}
+
+header h4 {
+  font-size: 3.7vw;
+  font-weight: 300;
+}
+
+.container {
+  width: 100%;
+  max-width: 1366px;
+  border: solid 3px #f7f7f7;
 }
 
 .header-txt {
@@ -42,11 +58,29 @@ header::before {
   z-index: 2;
 }
 
-.brand, .info {
-  margin: 1.2em 0;
-  font-weight: 300;
-  font-size: 0.8rem;
+@media screen and (min-width: 500px) {
+  header h1 {
+    font-size: 8.2vw;
+  }
+  header h4 {
+    font-size: 3.1vw;
+  }
 }
-.brand {
-  letter-spacing: 0.2em;
+
+@media screen and (min-width: 720px) {
+  header h1 {
+    font-size: 5.5vw;
+  }
+  header h4 {
+    font-size: 2.1vw;
+  }
+}
+
+@media screen and (min-width: 1366px) {
+  header h1 {
+    font-size: 4.6em;
+  }
+  header h4 {
+    font-size: 1.8em;
+  }
 }
