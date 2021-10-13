@@ -1,0 +1,71 @@
+header {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background-color: var(--shade-100);
+}
+
+header h1 {
+  font-size: clamp(3rem, 5.6vw, 4.6rem);
+  line-height: 1em;
+}
+
+header p {
+  margin-left: 1%;
+  font-size: clamp(0.9rem, 1.8vw, 1.5rem);
+  letter-spacing: 0.1em;
+  color: var(--shade-500);
+  text-transform: uppercase;
+}
+
+header * {
+  margin: 0.2em 0;
+}
+
+.header-txt-wrapper {
+  position: relative;
+  margin: 2%;
+}
+
+.greet {
+  display: flex;
+  align-items: center;
+  padding: clamp(1em, 5%, 5em);
+  height: 85vh;
+}
+
+.greet h2 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  letter-spacing: 0.05em;
+  color: var(--shade-500);
+}
+
+.greet p {
+  font-size: clamp(1.1rem, 2.5vw, 1.6rem);
+  letter-spacing: 0.02em;
+  color: var(--grey-txt);
+}
+
+.project {
+  display: flex;
+  align-items: center;
+  height: 85vh;
+  background-color: var(--shade-100);
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 10em;
+  background-color: var(--shade-300);
+}
