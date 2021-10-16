@@ -42,7 +42,6 @@ header .container {
 .greeting {
   display: flex;
   align-items: center;
-  padding: 8vw;
 }
 
 .greeting h2 {
@@ -57,14 +56,23 @@ header .container {
   color: var(--grey-txt);
 }
 
+.greeting .container {
+  margin: 5%;
+}
+
 .projects {
   display: flex;
   align-items: center;
-  padding: 8vw;
   background-color: var(--shade-100);
 }
 
+.projects .container {
+  margin: 5%;
+}
+
 .projects h2 {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
   font-size: clamp(2rem, 5vw, 3rem);
   letter-spacing: 0.05em;
   color: var(--shade-500);
@@ -73,18 +81,16 @@ header .container {
 .project-list {
   display: flex;
   flex-direction: column;
-  gap: 2em;
 }
 
 .project {
   display: flex;
   align-items: center;
-  gap: 1em;
+  gap: 2em;
   width: 100%;
   height: auto;
-  padding-top: 2em;
-  padding-bottom: 2em;
-  /* border: dashed 2px red; */
+  padding-top: 4vh;
+  padding-bottom: 4vh;
 }
 
 .project + .project {
@@ -118,7 +124,7 @@ footer {
   background-color: var(--shade-300);
 }
 
-@media screen and (max-width: 756px) {
+@media screen and (max-width: 992px) {
   .project {
     flex-direction: column;
     gap: unset;
@@ -128,8 +134,7 @@ footer {
   }
   .project-img,
   .project-description {
-    width: auto;
-    height: 50%;
+    width: 100%;
   }
   .project-description {
     padding: 2em 2em;
