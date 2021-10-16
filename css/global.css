@@ -9,10 +9,10 @@
 body {
   display: flex;
   justify-content: center;
-  font-family: 'Source Sans Pro', Arial, sans-serif;
   padding: 0;
   margin: 0;
   background-color: var(--background-color);
+  font-family: 'Source Sans Pro', Arial, sans-serif;
 }
 
 body * {
@@ -20,7 +20,6 @@ body * {
 }
 
 .master-container {
-  width: 100%;
   max-width: 1440px;
   min-width: 300px;
 }

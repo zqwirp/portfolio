@@ -1,4 +1,5 @@
 header {
+  position: relative;
   display: flex;
   align-items: center;
   height: 100vh;
@@ -9,9 +10,16 @@ header::before {
   position: absolute;
   bottom: 0;
   left: 0;
+  z-index: -1;
   width: 100%;
   height: 50%;
   background-color: var(--shade-100);
+}
+
+header p,
+header h1 {
+  margin-top: 0.2em;
+  margin-bottom: 0.2em;
 }
 
 header h1 {
@@ -24,62 +32,45 @@ header p {
   font-size: clamp(0.9rem, 1.8vw, 1.5rem);
   letter-spacing: 0.1em;
   color: var(--shade-500);
-  text-transform: uppercase;
 }
 
-header * {
-  margin: 0.2em 0;
+header .container {
+  margin-left: 2vw;
+  margin-right: 2vw;
 }
 
-.header-txt-wrapper {
-  position: relative;
-  margin: 2%;
-}
-
-.greet {
+.greeting {
   display: flex;
   align-items: center;
-  padding: clamp(1em, 5%, 5em);
-  height: 85vh;
+  padding: 8vw;
 }
 
-.greet-txt-wrapper {
-  height: 100%;
-  width: 100%;
-}
-
-.greet h2 {
+.greeting h2 {
   font-size: clamp(2rem, 5vw, 3rem);
   letter-spacing: 0.05em;
   color: var(--shade-500);
 }
 
-.greet p {
+.greeting p {
   font-size: clamp(1.1rem, 2.5vw, 1.6rem);
   letter-spacing: 0.02em;
   color: var(--grey-txt);
 }
 
-.projects-container {
+.projects {
   display: flex;
   align-items: center;
-  padding: clamp(1em, 5%, 5em);
-  padding-top: 0;
+  padding: 8vw;
   background-color: var(--shade-100);
 }
 
-.projects-list-wrapper {
-  width: 100%;
-  height: 100%;
-}
-
-.projects-container h2 {
+.projects h2 {
   font-size: clamp(2rem, 5vw, 3rem);
   letter-spacing: 0.05em;
   color: var(--shade-500);
 }
 
-.projects {
+.project-list {
   display: flex;
   flex-direction: column;
   gap: 2em;
