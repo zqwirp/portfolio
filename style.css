@@ -1,3 +1,5 @@
+@import "./animations.css";
+
 :root {
   --background-color: #fafafa;
   --shade-100: #efefef;
