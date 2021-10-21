@@ -37,9 +37,7 @@ header .wrapper {
 }
 
 .greeting {
-  display: flex;
-  align-items: center;
-  min-height: 100vh;
+  padding: 5%;
 }
 
 .greeting h2 {
@@ -54,18 +52,9 @@ header .wrapper {
   color: var(--grey-txt);
 }
 
-.greeting .container {
-  margin: 5%;
-}
-
 .projects {
-  display: flex;
-  align-items: center;
+  padding: 5%;
   background-color: var(--shade-100);
-}
-
-.projects .container {
-  margin: 0 5% 2%;
 }
 
 .projects h2 {
@@ -99,18 +88,15 @@ header .wrapper {
   flex-direction: row-reverse;
 }
 
-.item-img {
-  margin: 0;
-}
-
-.item-img img {
+.item img {
   display: block;
   height: auto;
   width: 100%;
+  margin: 0;
 }
 
-.item-img,
-.item-description {
+.item img,
+.item .text {
   width: 50%;
 }
 
@@ -137,11 +123,11 @@ footer p {
   .item:nth-child(even) {
     flex-direction: column;
   }
-  .item-img,
-  .item-description {
+  .item img,
+  .item .text {
     width: 100%;
   }
-  .item-description {
+  .item .text {
     padding: 2em 2em;
     background-color: var(--background-color);
   }
