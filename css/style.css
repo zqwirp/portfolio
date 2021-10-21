@@ -18,8 +18,7 @@ header::before {
 
 header p,
 header h1 {
-  margin-top: 0.2em;
-  margin-bottom: 0.2em;
+  margin: 0.2em 0;
 }
 
 header h1 {
@@ -28,15 +27,13 @@ header h1 {
 }
 
 header p {
-  margin-left: 1%;
   font-size: clamp(0.9rem, 1.8vw, 1.5rem);
   letter-spacing: 0.1em;
   color: var(--shade-500);
 }
 
-header .container {
-  margin-left: 2vw;
-  margin-right: 2vw;
+header .wrapper {
+  margin: 0 2vw;
 }
 
 .greeting {
@@ -79,12 +76,12 @@ header .container {
   color: var(--shade-500);
 }
 
-.project-list {
+.items {
   display: flex;
   flex-direction: column;
 }
 
-.project {
+.item {
   display: flex;
   align-items: center;
   gap: 2em;
@@ -94,26 +91,26 @@ header .container {
   padding-bottom: 4%;
 }
 
-.project + .project {
+.item + .item {
   border-top: dashed 0.5px black;
 }
 
-.project:nth-child(even) {
+.item:nth-child(even) {
   flex-direction: row-reverse;
 }
 
-.project-img {
+.item-img {
   margin: 0;
 }
 
-.project-img img {
+.item-img img {
   display: block;
   height: auto;
   width: 100%;
 }
 
-.project-img,
-.project-description {
+.item-img,
+.item-description {
   width: 50%;
 }
 
@@ -133,18 +130,18 @@ footer p {
 }
 
 @media screen and (max-width: 992px) {
-  .project {
+  .item {
     flex-direction: column;
     gap: unset;
   }
-  .project:nth-child(even) {
+  .item:nth-child(even) {
     flex-direction: column;
   }
-  .project-img,
-  .project-description {
+  .item-img,
+  .item-description {
     width: 100%;
   }
-  .project-description {
+  .item-description {
     padding: 2em 2em;
     background-color: var(--background-color);
   }
