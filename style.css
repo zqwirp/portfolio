@@ -181,7 +181,8 @@ footer a {
   color: var(--shade-500);
 }
 
-footer a:hover {
+footer a:hover,
+footer a:active {
   color: var(--shade-100);
 }
 
